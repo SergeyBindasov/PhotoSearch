@@ -1,0 +1,23 @@
+{
+  "images" : [
+    {
+      "filename" : "—Pngtree—simple thin straight line_5487830.png",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "filename" : "—Pngtree—simple thin straight line_5487830-1.png",
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "filename" : "—Pngtree—simple thin straight line_5487830-2.png",
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}
