@@ -41,10 +41,7 @@ class GalleryViewController: UIViewController {
                 print(error)
             }
         }
-        let queue = DispatchQueue(label: "RequestPhotos", qos:.userInitiated)
-        queue.async {
             task.resume()
-        }
     }
     
     override func viewDidLoad() {

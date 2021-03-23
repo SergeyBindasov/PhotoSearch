@@ -11,6 +11,8 @@ final class SearchView: UIView {
     
     var searchButtontapped: (() -> Void)?
     
+    var screenTapped: (() -> Void)?
+    
     private lazy var searchLabel: UILabel = {
         let lable = UILabel()
         lable.text = "Photo Search"
@@ -49,11 +51,19 @@ final class SearchView: UIView {
         button.addTarget(self, action: #selector(buttonTapped), for: .touchUpInside)
         return button
     }()
+   
+    /// TAP
+    lazy var tap: UITapGestureRecognizer = {
+        let tap = UITapGestureRecognizer()
+        tap.addTarget(self, action: #selector(tapDone))
+        return tap
+    }()
     
     override init(frame: CGRect) {
         super.init(frame: UIScreen.main.bounds)
         backgroundColor = .white
         addSubviews(searchLabel, line, textField, button)
+        addGestureRecognizer(tap)
         setupLayout()
     }
     
@@ -65,6 +75,10 @@ final class SearchView: UIView {
 extension SearchView {
     @objc func buttonTapped() {
         searchButtontapped?()
+    }
+    
+    @objc func tapDone() {
+        screenTapped?()
     }
 }
 
